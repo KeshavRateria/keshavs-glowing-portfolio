@@ -228,7 +228,7 @@ function Index() {
         </div>
       </footer>
 
-      {openProject !== null && <ProjectModal p={projects[openProject]} n={openProject + 1} onClose={() => setOpenProject(null)} />}
+      {openProject !== null && projects[openProject] && <ProjectModal p={projects[openProject]!} n={openProject + 1} onClose={() => setOpenProject(null)} />}
     </>
   );
 }
