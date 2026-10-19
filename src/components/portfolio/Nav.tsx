@@ -29,7 +29,7 @@ export function Nav() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? "border-b border-border bg-background/75 backdrop-blur-xl" : ""}`}
     >
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6" aria-label="Primary">
+      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8" aria-label="Primary">
         <a href="#home" className="font-mono text-sm font-semibold tracking-tight text-foreground">
           <span className="text-muted-foreground">&lt;</span>KR<span className="text-gradient">/&gt;</span>
         </a>

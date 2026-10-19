@@ -68,8 +68,14 @@
   --paper-foreground: oklch(0.15 0.02 280);
   --paper-muted: oklch(0.45 0.02 280);
   --paper-border: oklch(0.15 0.02 280 / 15%);
-  --gradient-brand: linear-gradient(100deg, var(--primary), var(--violet) 55%, var(--magenta));
+  --gradient-brand: linear-gradient(100deg, var(--primary), var(--violet) 60%, var(--magenta));
+  --gradient-hero:
+    radial-gradient(60% 55% at 72% 42%, color-mix(in oklab, var(--primary) 28%, transparent), transparent 70%),
+    radial-gradient(45% 40% at 85% 70%, color-mix(in oklab, var(--violet) 22%, transparent), transparent 70%),
+    radial-gradient(80% 60% at 20% 0%, color-mix(in oklab, var(--navy) 90%, transparent), transparent 70%);
   --shadow-glow: 0 0 60px -10px color-mix(in oklab, var(--primary) 55%, transparent);
+  --shadow-card: 0 1px 0 0 oklch(1 0 0 / 6%) inset, 0 20px 40px -24px oklch(0 0 0 / 60%);
+  --shadow-card-hover: 0 1px 0 0 oklch(1 0 0 / 8%) inset, 0 30px 60px -30px color-mix(in oklab, var(--primary) 60%, transparent);
 }
 
 @layer base {
@@ -80,6 +86,7 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
   :focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
   ::selection { background: var(--violet); color: var(--primary-foreground); }
@@ -92,12 +99,43 @@
   color: transparent;
 }
 @utility bg-gradient-brand { background: var(--gradient-brand); }
+@utility bg-hero { background: var(--gradient-hero); }
 @utility shadow-glow { box-shadow: var(--shadow-glow); }
+@utility shadow-card { box-shadow: var(--shadow-card); }
+@utility shadow-card-hover { box-shadow: var(--shadow-card-hover); }
 @utility eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+/* Type scale */
+@utility display-hero {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3.25rem, 10.5vw, 9.5rem);
+  line-height: 0.86;
+  letter-spacing: -0.045em;
+}
+@utility display-xl {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.75rem, 8vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+@utility display-lg {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.25rem, 5.5vw, 4.75rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+}
+/* Light sections float as inset sheets for a softer dark/light transition */
+@utility sheet {
+  margin-inline: 0.5rem;
+  border-radius: 1.5rem;
+  @media (min-width: 768px) { margin-inline: 1rem; border-radius: 2.5rem; }
 }
 
 @keyframes spin-slow { to { transform: rotate(360deg); } }
