@@ -155,9 +155,9 @@ function Index() {
                     </div>
                     <h3 className="relative mt-12 font-display text-2xl font-bold tracking-tight md:text-[2rem] md:leading-tight">{p.title}</h3>
                     <p className="relative mt-4 flex-1 leading-relaxed text-muted-foreground">{p.description}</p>
-                    <div className="relative mt-8 flex flex-wrap items-end justify-between gap-6 border-t border-border pt-6">
+                    <div className="relative mt-8 flex flex-col gap-6 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
                       <ul className="flex flex-wrap gap-2">{p.tech.map((t) => <li key={t} className="rounded-full bg-secondary/70 px-3 py-1 font-mono text-xs text-secondary-foreground">{t}</li>)}</ul>
-                      <button onClick={() => setOpenProject(i)} className="eyebrow inline-flex items-center gap-2 text-foreground transition-colors hover:text-primary">
+                      <button onClick={() => setOpenProject(i)} className="eyebrow inline-flex shrink-0 items-center gap-2 self-start text-foreground transition-colors hover:text-primary sm:self-auto">
                         Project details <span className="transition-transform group-hover:translate-x-1">→</span>
                       </button>
                     </div>
