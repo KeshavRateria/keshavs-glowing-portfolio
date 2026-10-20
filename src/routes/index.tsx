@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { Nav } from "@/components/portfolio/Nav";
 import { Portal } from "@/components/portfolio/Portal";
 import { Reveal } from "@/components/portfolio/Reveal";
-import { beyond, exploring, journey, profile, projects, skillGroups, type Project } from "@/content/portfolio";
+import { CvButton } from "@/components/portfolio/CvButton";
+import { beyond, exploring, journey, lookingFor, profile, projects, skillGroups, type Project } from "@/content/portfolio";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -66,6 +67,7 @@ function Index() {
               <Reveal delay={300} className="mt-10 flex flex-wrap gap-3">
                 <a href="#projects" className="eyebrow rounded-full bg-foreground px-6 py-3.5 text-background transition-all hover:-translate-y-0.5 hover:shadow-glow">Explore my work</a>
                 <a href="#about" className="eyebrow rounded-full border border-border px-6 py-3.5 text-foreground transition-colors hover:border-primary/60 hover:bg-card/60">About me</a>
+                <CvButton />
               </Reveal>
             </div>
             <div className="order-1 flex justify-center lg:order-2"><Portal /></div>
@@ -92,6 +94,7 @@ function Index() {
                     </div>
                   ))}
                 </dl>
+                <CvButton light className="mt-10" />
               </Reveal>
             </div>
           </div>
@@ -132,11 +135,38 @@ function Index() {
           </div>
         </section>
 
+        {/* LOOKING FOR */}
+        <section id="looking" className={`sheet bg-paper text-paper-foreground ${section}`}>
+          <div className={container}>
+            <SectionLabel n="03" light>Looking for</SectionLabel>
+            <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
+              <Reveal><h2 className="display-lg">What I'm<br />looking for<span className="text-violet">.</span></h2></Reveal>
+              <Reveal delay={150}><p className="text-lg leading-relaxed text-paper-muted">{lookingFor.intro}</p></Reveal>
+            </div>
+            <div className="mt-16 grid gap-10 border-t border-paper-border pt-10 md:grid-cols-2 md:gap-16">
+              {([["Areas of interest", lookingFor.areas], ["Opportunities I'm interested in", lookingFor.opportunities]] as const).map(([title, items], gi) => (
+                <Reveal key={title} delay={gi * 100}>
+                  <h3 className="eyebrow text-paper-muted">{title}</h3>
+                  <ul className="mt-5 divide-y divide-paper-border border-y border-paper-border">
+                    {items.map((x, i) => (
+                      <li key={x} className="flex items-baseline gap-4 py-4">
+                        <span className="font-mono text-xs text-violet">{pad(i + 1)}</span>
+                        <span className="font-display text-lg font-semibold tracking-tight md:text-xl">{x}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </Reveal>
+              ))}
+            </div>
+            <Reveal><p className="mt-16 max-w-2xl font-display text-2xl font-semibold tracking-tight md:text-3xl">{lookingFor.closing}</p></Reveal>
+          </div>
+        </section>
+
         {/* PROJECTS */}
         <section id="projects" className={`relative ${section}`}>
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_40%_at_50%_0%,color-mix(in_oklab,var(--primary)_10%,transparent),transparent)]" />
           <div className={`relative ${container}`}>
-            <SectionLabel n="03">Projects</SectionLabel>
+            <SectionLabel n="04">Projects</SectionLabel>
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Reveal><h2 className="display-lg">Selected<br />projects</h2></Reveal>
               <p className="max-w-xs text-muted-foreground">Experiments, ideas, and things I've worked on.</p>
@@ -171,7 +201,7 @@ function Index() {
         {/* JOURNEY */}
         <section id="journey" className={`sheet bg-paper text-paper-foreground ${section}`}>
           <div className={container}>
-            <SectionLabel n="04" light>Journey</SectionLabel>
+            <SectionLabel n="05" light>Journey</SectionLabel>
             <Reveal><h2 className="display-lg">The journey<br />so far<span className="text-violet">.</span></h2></Reveal>
             <ol className="relative mt-16 border-l border-paper-border md:ml-24">
               {journey.map((j, i) => (
@@ -191,7 +221,7 @@ function Index() {
         {/* BEYOND */}
         <section className={section} aria-labelledby="beyond-h">
           <div className={container}>
-            <SectionLabel n="05">Personal</SectionLabel>
+            <SectionLabel n="06">Personal</SectionLabel>
             <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
               <Reveal><h2 id="beyond-h" className="display-lg">Beyond the <span className="text-gradient">screen</span></h2></Reveal>
               <p className="text-muted-foreground">Tap a card to reveal.</p>
@@ -206,7 +236,7 @@ function Index() {
         <section id="contact" className="relative overflow-hidden border-t border-border py-28 md:py-40">
           <div className="pointer-events-none absolute -bottom-48 left-1/2 h-96 w-[min(60rem,140vw)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,var(--primary),var(--violet)_60%,transparent)] opacity-30 blur-3xl" />
           <div className={`relative ${container}`}>
-            <SectionLabel n="06">Contact</SectionLabel>
+            <SectionLabel n="07">Contact</SectionLabel>
             <Reveal><h2 className="display-hero">Let's<br /><span className="text-gradient">connect.</span></h2></Reveal>
             <p className="mt-8 max-w-md text-lg text-muted-foreground">Always open to learning, exchanging ideas, and exploring interesting projects.</p>
             <div className="mt-12 grid gap-4 sm:grid-cols-3">

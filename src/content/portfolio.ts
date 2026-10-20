@@ -64,3 +64,25 @@ export const beyond = [
   { title: "Personal Philosophy", text: "[Editable] Add a principle you try to live or learn by." },
   { title: "Curious About", text: "[Editable] Add the questions and ideas you want to explore." },
 ];
+
+// CV: place your real PDF at public/Keshav_Rateria_CV.pdf. Until it exists,
+// the CV buttons show "CV coming soon" instead of a broken download.
+export const cv = { url: "/Keshav_Rateria_CV.pdf", filename: "Keshav_Rateria_CV.pdf" };
+
+export const lookingFor = {
+  intro:
+    "I'm interested in opportunities that allow me to apply my programming fundamentals, strengthen my problem-solving skills, and gain practical experience by working on real-world projects.",
+  areas: [
+    "Software Development",
+    "Web Development",
+    "Data Structures and Algorithms",
+    "Artificial Intelligence and Emerging Technologies",
+  ],
+  opportunities: [
+    "Beginner-friendly internships",
+    "Academic and collaborative projects",
+    "Suitable beginner-level freelance projects",
+    "Hackathons and collaborative learning opportunities",
+  ],
+  closing: "I'm eager to learn, contribute, and grow through hands-on experience.",
+};

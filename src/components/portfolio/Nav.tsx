@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-const links = ["home", "about", "skills", "projects", "journey", "contact"];
+const links = ["home", "about", "skills", "looking", "projects", "journey", "contact"];
+const labels: Record<string, string> = { looking: "looking for" };
 
 export function Nav() {
   const [active, setActive] = useState("home");
@@ -42,7 +43,7 @@ export function Nav() {
                 className={`eyebrow rounded-full px-3 py-2 transition-colors ${active === l ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}
               >
                 {active === l && <span className="mr-1.5 inline-block h-1.5 w-1.5 rounded-full bg-gradient-brand align-middle" />}
-                {l}
+                {labels[l] ?? l}
               </a>
             </li>
           ))}
@@ -65,7 +66,7 @@ export function Nav() {
                 onClick={() => setOpen(false)}
                 className={`block py-3 font-display text-2xl capitalize ${active === l ? "text-gradient" : "text-foreground"}`}
               >
-                {l}
+                {labels[l] ?? l}
               </a>
             </li>
           ))}
