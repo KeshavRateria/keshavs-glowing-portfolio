@@ -118,7 +118,7 @@ function Index() {
                 </Reveal>
               ))}
             </div>
-            <p className="eyebrow mb-5 mt-16 text-muted-foreground">Currently exploring — not yet claimed as skills</p>
+            <p className="eyebrow mb-5 mt-16 text-muted-foreground">CURRENTLY EXPLORING -</p>
             <Reveal>
               <ul className="divide-y divide-border border-y border-border">
                 {exploring.map((e, i) => (
