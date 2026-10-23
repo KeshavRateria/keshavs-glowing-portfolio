@@ -62,7 +62,7 @@ export const beyond = [
   { title: "Interests", text: "Technology, financial markets, economics, and global affairs. I enjoy exploring how innovation, business, and world events influence one another." },
   { title: "Hobbies", text: "Following stock market trends, keeping up with news and geopolitics, gaming, and unwinding with classic retro music." },
   { title: "Personal Philosophy", text: "I believe curiosity is the foundation of growth. Every new experience is an opportunity to learn, challenge perspectives, and become a better version of myself." },
-  { title: "Curious About", text: "[Editable] Add the questions and ideas you want to explore." },
+  { title: "Curious About", text: "How global events shape financial markets, how emerging technologies transform industries, and what it takes to turn an idea into a successful business." },
 ];
 
 // CV: place your real PDF at public/Keshav_Rateria_CV.pdf. Until it exists,
