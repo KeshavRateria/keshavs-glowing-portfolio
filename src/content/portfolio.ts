@@ -1,4 +1,5 @@
 // Edit this file to update the portfolio content.
+import cvAsset from "@/assets/Keshav_Rateria_CV.pdf.asset.json";
 export const profile = {
   name: "Keshav Rateria",
   degree: "B.Tech Computer Science and Engineering",
@@ -65,9 +66,8 @@ export const beyond = [
   { title: "Curious About", text: "How global events shape financial markets, how emerging technologies transform industries, and what it takes to turn an idea into a successful business." },
 ];
 
-// CV: place your real PDF at public/Keshav_Rateria_CV.pdf. Until it exists,
-// the CV buttons show "CV coming soon" instead of a broken download.
-export const cv = { url: "/Keshav_Rateria_CV.pdf", filename: "Keshav_Rateria_CV.pdf" };
+// CV: the PDF you sent, served from the site's own file storage.
+export const cv = { url: cvAsset.url, filename: cvAsset.original_filename };
 
 export const lookingFor = {
   intro:
