@@ -263,7 +263,7 @@ function Index() {
 
       <footer className="border-t border-border">
         <div className={`flex flex-col gap-4 py-8 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between ${container}`}>
-          <p><span className="text-foreground">{profile.name}</span> · Designed and built as an evolving personal portfolio. © {new Date().getFullYear()}</p>
+          <p>{"\n"}</p>
           <a href="#home" className="eyebrow self-start rounded-full border border-border px-4 py-2 text-foreground transition-colors hover:border-primary/60 md:self-auto">↑ Back to top</a>
         </div>
       </footer>
