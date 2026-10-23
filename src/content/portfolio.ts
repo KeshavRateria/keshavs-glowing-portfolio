@@ -59,7 +59,7 @@ export const journey = [
 ];
 
 export const beyond = [
-  { title: "Interests", text: "[Editable] Add the topics and fields you enjoy." },
+  { title: "Interests", text: "Exploring artificial intelligence, software development, emerging technologies, and entrepreneurship." },
   { title: "Hobbies", text: "[Editable] Add what you like doing away from the screen." },
   { title: "Personal Philosophy", text: "[Editable] Add a principle you try to live or learn by." },
   { title: "Curious About", text: "[Editable] Add the questions and ideas you want to explore." },
