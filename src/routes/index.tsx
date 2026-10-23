@@ -242,7 +242,7 @@ function Index() {
             <div className="mt-12 grid gap-4 sm:grid-cols-2">
               {[
                 ["Email", profile.email ? `mailto:${profile.email}` : "", profile.email, "mailto:keshavrateria11@gmail.com"],
-                ["GitHub", profile.github, profile.github, "Link coming soon"],
+                ["GitHub", profile.github, profile.github, "https://github.com/KeshavRateria"],
               ].map(([label, href, value, placeholder]) =>
                 href ? (
                   <a key={label} href={href} target={label === "Email" ? undefined : "_blank"} rel="noreferrer" className="group rounded-2xl border border-border bg-card/60 p-6 shadow-card backdrop-blur transition-all hover:border-primary/40 hover:shadow-card-hover">
