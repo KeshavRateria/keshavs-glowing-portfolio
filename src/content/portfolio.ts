@@ -38,7 +38,7 @@ export const projects: Project[] = [
       "A Python and MySQL project designed to organise school-related information, including student records, teacher access, fees, and academic results.",
     tech: ["Python", "MySQL"],
     status: "Completed (learning project)",
-    contribution: "[Editable] Describe your role and what you built.",
+    contribution: "Designed and implemented the application's core functionality, including role-based operations, database connectivity, and data management using Python and MySQL.",
   },
   {
     title: "Smart Immersion Cooling System",
