@@ -1,5 +1,4 @@
 // Edit this file to update the portfolio content.
-import cvAsset from "@/assets/Keshav_Rateria_CV.pdf.asset.json";
 export const profile = {
   name: "Keshav Rateria",
   degree: "B.Tech Computer Science and Engineering",
@@ -67,7 +66,10 @@ export const beyond = [
 ];
 
 // CV: the PDF you sent, served from the site's own file storage.
-export const cv = { url: cvAsset.url, filename: cvAsset.original_filename };
+export const cv = {
+  url: "/Keshav_Rateria_CV.pdf",
+  filename: "Keshav_Rateria_CV.pdf",
+};
 
 export const lookingFor = {
   intro:
