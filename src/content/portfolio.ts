@@ -60,7 +60,7 @@ export const journey = [
 
 export const beyond = [
   { title: "Interests", text: "Technology, financial markets, economics, and global affairs. I enjoy exploring how innovation, business, and world events influence one another." },
-  { title: "Hobbies", text: "[Editable] Add what you like doing away from the screen." },
+  { title: "Hobbies", text: "Following stock market trends, keeping up with news and geopolitics, gaming, and unwinding with classic retro music." },
   { title: "Personal Philosophy", text: "[Editable] Add a principle you try to live or learn by." },
   { title: "Curious About", text: "[Editable] Add the questions and ideas you want to explore." },
 ];
