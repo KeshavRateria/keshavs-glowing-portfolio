@@ -239,12 +239,11 @@ function Index() {
             <SectionLabel n="07">Contact</SectionLabel>
             <Reveal><h2 className="display-hero">Let's<br /><span className="text-gradient">connect.</span></h2></Reveal>
             <p className="mt-8 max-w-md text-lg text-muted-foreground">Always open to learning, exchanging ideas, and exploring interesting projects.</p>
-            <div className="mt-12 grid gap-4 sm:grid-cols-3">
+            <div className="mt-12 grid gap-4 sm:grid-cols-2">
               {[
-                ["Email", profile.email ? `mailto:${profile.email}` : "", profile.email],
-                ["GitHub", profile.github, profile.github],
-                ["LinkedIn", profile.linkedin, profile.linkedin],
-              ].map(([label, href, value]) =>
+                ["Email", profile.email ? `mailto:${profile.email}` : "", profile.email, "mailto:keshavrateria11@gmail.com"],
+                ["GitHub", profile.github, profile.github, "Link coming soon"],
+              ].map(([label, href, value, placeholder]) =>
                 href ? (
                   <a key={label} href={href} target={label === "Email" ? undefined : "_blank"} rel="noreferrer" className="group rounded-2xl border border-border bg-card/60 p-6 shadow-card backdrop-blur transition-all hover:border-primary/40 hover:shadow-card-hover">
                     <span className="eyebrow text-muted-foreground">{label}</span>
@@ -253,7 +252,7 @@ function Index() {
                 ) : (
                   <div key={label} className="rounded-2xl border border-dashed border-border bg-card/30 p-6">
                     <span className="eyebrow text-muted-foreground">{label}</span>
-                    <span className="mt-3 block font-mono text-sm text-muted-foreground">mailto:keshavrateria11@gmail.com</span>
+                    <span className="mt-3 block font-mono text-sm text-muted-foreground">{placeholder}</span>
                   </div>
                 ),
               )}
