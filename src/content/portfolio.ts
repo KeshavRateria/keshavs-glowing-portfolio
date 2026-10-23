@@ -46,7 +46,7 @@ export const projects: Project[] = [
       "A multidisciplinary engineering project exploring ESP32-based temperature monitoring and automated cooling, with planned integration of fluid monitoring and solar power.",
     tech: ["ESP32", "C++", "Sensors", "Embedded Systems"],
     status: "In development",
-    contribution: "[Editable] Describe your role and what you built.",
+    contribution: " Responsible for embedded software development, including ESP32 programming, sensor integration, flow-monitoring logic, and buzzer-based safety alerts using C++ and Wokwi simulation.",
     planned: ["Fluid monitoring", "Solar power integration"],
   },
 ];
