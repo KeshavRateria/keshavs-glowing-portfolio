@@ -253,7 +253,7 @@ function Index() {
                 ) : (
                   <div key={label} className="rounded-2xl border border-dashed border-border bg-card/30 p-6">
                     <span className="eyebrow text-muted-foreground">{label}</span>
-                    <span className="mt-3 block font-mono text-sm text-muted-foreground">Link coming soon</span>
+                    <span className="mt-3 block font-mono text-sm text-muted-foreground">https://github.com/KeshavRateria</span>
                   </div>
                 ),
               )}
